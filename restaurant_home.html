@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar{
+            background-color: black;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="./menu.html" target="_blank">Menu</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </nav>
+        <h4>Restaurant specialties</h4>
+        <!-- <ul type="circle">
+            <li>Italian</li>
+            <li>Indian</li>
+            <li>Chinese</li>
+        </ul> -->
+        
+        <button onclick="italian()">Italian</button>
+        <ul id = 'italian'></ul>
+        <button onclick="indian()">Indian</button>
+        <ul id = 'indian'></ul>
+        <button onclick="chinese()">Chinese</button>
+        <ul id = 'chinese'></ul>
+        <!-- <div class="dropdown">
+            <label>Indian</label>
+            <select>
+                <option>Indian</option>
+                <option>biryani</option>
+                <option>paneer</option>
+            </select>
+        </div> -->
+    </div>
+    <script>
+        function italian(){
+            document.getElementById('italian').innerHTML +="<ul><li>pasta</li> <li>pizza</li></ul>"
+        }
+        function indian(){
+            document.getElementById('indian').innerHTML +="<ul><li>biryani</li> <li>paneer</li></ul>"
+        }
+        function chinese(){
+            document.getElementById('chinese').innerHTML +="<ul><li>noodles</li> <li>spring roll</li></ul>"
+        }
+    </script>
+</body>
+</html>
