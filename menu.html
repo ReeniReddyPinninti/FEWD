@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Add to cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Biryani</td>
+                    <td>100</td>
+                    <td>Tasty & flavourful</td>
+                    <td><button onclick="add('Biryani', 100)">Add</button></td>
+                </tr>
+                <tr>
+                    <td>Fries</td>
+                    <td>100</td>
+                    <td>Crunchy</td>
+                    <td><button onclick="add('Fries', 100)">Add</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="cart">
+            <h3>Cart</h3>
+            <ul id="items"></ul>
+        </div>
+    </div>
+    <script>
+        function add(itemName, itemPrice) {
+            document.getElementById('items').innerHTML += `${itemName} - ${itemPrice}<br>`;
+        }
+    </script>
+    
+</body>
+</html>
